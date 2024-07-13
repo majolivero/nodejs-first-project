@@ -725,3 +725,40 @@ La elección del código de estado depende de la situación específica y del se
 
 
 15. ¿Cuales son los status code mas comunes para el verbo DELETE?
+
+Los códigos de estado más comunes para el verbo DELETE en HTTP indican el resultado de la solicitud de eliminación de recursos en el servidor. Estos códigos son utilizados para informar al cliente sobre el estado de la operación que ha intentado realizar. Aquí algunos de los más comunes:
+
+*200 OK:
+
+Indica que la solicitud DELETE ha sido completada correctamente.
+Se utiliza cuando el recurso ha sido eliminado según lo solicitado.
+
+*204 No Content:
+
+Indica que la solicitud DELETE ha sido completada correctamente, pero no hay contenido para devolver.
+Es común devolver este código cuando el servidor no devuelve ningún contenido después de eliminar el recurso.
+
+*400 Bad Request:
+
+Indica que la solicitud DELETE no pudo ser entendida por el servidor debido a una sintaxis incorrecta o datos no válidos.
+Puede ocurrir si los parámetros de la URL o de la solicitud no están en el formato esperado.
+
+*401 Unauthorized:
+
+Indica que se requiere autenticación para acceder al recurso solicitado.
+Es común cuando se intenta eliminar recursos protegidos sin autenticación.
+
+*403 Forbidden:
+
+Indica que el servidor ha entendido la solicitud DELETE, pero se niega a completarla.
+Puede ocurrir cuando el usuario no tiene los permisos necesarios para eliminar el recurso.
+
+*404 Not Found:
+
+Indica que el servidor no pudo encontrar el recurso solicitado para eliminar.
+Puede ocurrir si la URL o el recurso especificado en la solicitud DELETE no existe.
+
+*409 Conflict:
+
+Indica que la solicitud DELETE no pudo completarse debido a un conflicto con el estado actual del recurso.
+Puede ocurrir si hay dependencias o restricciones que impiden la eliminación del recurso en ese momento.
