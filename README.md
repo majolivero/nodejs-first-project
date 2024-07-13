@@ -336,6 +336,18 @@ Como trabajo autonomo, prueba el resto de los verbos HTTP que se mencionan en la
 ## 8. Preguntas de Reflexión y trabajo investigativo
 
 1. ¿Qué es el filesystem (fs) en Node.js y para qué se utiliza?
+En Node.js el módulo fs(filesystem) es un módulo nativo. Es un conjunto de funcionalidades
+que permite interactuar con el sistema de archivos del sistema operativo. Este módulo proporciona
+métodos para leer y escribir archivos, manipular directorios y realizar operaciones de consulta y más. 
+
+Algunas de las operaciones comunes que se pueden realizar con fs incluyen:
+*Lectura y escritura de archivos
+*Crear archivos
+*Actualizar archivos
+*Borrar archivos
+*Manipulación de directorios(crear,renombrar,eliminar)
+*Cambio de permisos y propietarios de archivos 
+
 2. ¿Qué es un middleware en Express y cuál es su propósito?
 3. ¿Qué es un endpoint en una API RESTful y cuál es su función?
 4. ¿Qué son los verbos HTTP y cuáles son los más comunes?
