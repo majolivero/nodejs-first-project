@@ -424,22 +424,186 @@ En resumen, JSON es el formato de datos preferido en las APIs RESTful debido a s
 
 7. En lo que respecta al verbo POST responde:
     - ¿Qué es un verbo POST y cuál es su propósito?
+
+    El verbo POST es un método HTTP utilizado para enviar datos al servidor para crear un nuevo recurso. Su propósito principal es permitir la transferencia de datos desde el cliente hacia el servidor, donde los datos serán procesados para crear un nuevo recurso en el servidor.
+
     - ¿Cuándo se utiliza un verbo POST?
+
+    El verbo POST se utiliza en las siguientes situaciones:
+    
+    *Creación de recursos: Cuando se necesita crear un nuevo recurso en el servidor, como un nuevo usuario, una nueva entrada en un blog, o un nuevo producto en una tienda en línea.
+    *Envío de formularios: Al enviar formularios HTML desde el cliente al servidor.
+    *Subida de archivos: Al subir archivos desde el cliente al servidor.
+    *Operaciones complejas: Para operaciones que requieren la transferencia de datos complejos que no pueden ser representados en una URL (como datos en formato JSON o XML).
+
     - ¿En qué se diferencia un verbo POST de los otros verbos HTTP como GET, PUT y DELETE?
+
+    *GET:
+    -Propósito: Recuperar datos de un servidor.
+    -Uso: Lectura de recursos.
+    -Sin efectos secundarios: No modifica el estado del servidor.
+    -Transmisión de datos: Los datos se pasan a través de la URL (query string).
+    -Idempotente: Repetir una solicitud GET no cambia el estado del recurso.
+
+    *POST:
+    -Propósito: Enviar datos al servidor para crear un nuevo recurso.
+    -Uso: Creación de recursos.
+    -Efectos secundarios: Modifica el estado del servidor.
+    -Transmisión de datos: Los datos se pasan en el cuerpo de la solicitud.
+    -No idempotente: Repetir una solicitud POST puede crear múltiples recursos idénticos.
+
+    *PUT:
+    -Propósito: Enviar datos al servidor para actualizar un recurso existente.
+    -Uso: Actualización de recursos.
+    -Efectos secundarios: Modifica el estado del servidor.
+    -Transmisión de datos: Los datos se pasan en el cuerpo de la solicitud.
+    -Idempotente: Repetir una solicitud PUT con los mismos datos tendrá el mismo efecto que realizarla una sola vez.
+
+    *DELETE
+    -Propósito: Eliminar un recurso existente en el servidor.
+    -Uso: Eliminación de recursos.
+    -Efectos secundarios: Modifica el estado del servidor.
+    -Transmisión de datos: Normalmente no tiene cuerpo de solicitud.
+    -Idempotente: Repetir una solicitud DELETE tendrá el mismo efecto que realizarla una sola vez.
+
     - ¿Como se envian datos en un verbo POST?
+
+    Los datos en una solicitud POST se envían en el cuerpo (body) de la solicitud HTTP. El cuerpo de la solicitud puede contener varios tipos de datos, como JSON, XML, datos de formularios URL-encoded, o multipart/form-data para subir archivos.
+
 8. En lo que respecta al verbo GET responde:
+
     - ¿Qué es un verbo GET y cuál es su propósito?
+
+    El verbo GET es un método HTTP utilizado para solicitar datos de un servidor. Su propósito principal es recuperar información sin modificar el estado del servidor. Las solicitudes GET son idempotentes, lo que significa que realizar la misma solicitud varias veces no debería tener efectos adicionales.
+
     - ¿Cuándo se utiliza un verbo GET?
+
+    El verbo GET se utiliza en las siguientes situaciones:
+    
+    *Obtener datos: Cuando se necesita recuperar información desde el servidor, como obtener una lista de usuarios, detalles de un producto, o contenido de una página web.
+    *Navegación web: Los navegadores web utilizan GET para solicitar páginas web.
+    *APIs RESTful: Para recuperar recursos de una API sin modificar el servidor.
+    *Búsqueda: En formularios de búsqueda, donde los parámetros de búsqueda se envían en la URL.
+
     - ¿En qué se diferencia un verbo GET de los otros verbos HTTP como POST, PUT y DELETE?
+
+    *GET:
+    -Propósito: Recuperar datos de un servidor.
+    -Uso: Lectura de recursos.
+    -Sin efectos secundarios: No modifica el estado del servidor.
+    -Transmisión de datos: Los datos se pasan a través de la URL (query string).
+    -Idempotente: Repetir una solicitud GET no cambia el estado del recurso.
+
+    *POST:
+    -Propósito: Enviar datos al servidor para crear un nuevo recurso.
+    -Uso: Creación de recursos.
+    -Efectos secundarios: Modifica el estado del servidor.
+    -Transmisión de datos: Los datos se pasan en el cuerpo de la solicitud.
+    -No idempotente: Repetir una solicitud POST puede crear múltiples recursos idénticos.
+
+    *PUT:
+    -Propósito: Enviar datos al servidor para actualizar un recurso existente.
+    -Uso: Actualización de recursos.
+    -Efectos secundarios: Modifica el estado del servidor.
+    -Transmisión de datos: Los datos se pasan en el cuerpo de la solicitud.
+    -Idempotente: Repetir una solicitud PUT con los mismos datos tendrá el mismo efecto que realizarla una sola vez.
+
+    *DELETE
+    -Propósito: Eliminar un recurso existente en el servidor.
+    -Uso: Eliminación de recursos.
+    -Efectos secundarios: Modifica el estado del servidor.
+    -Transmisión de datos: Normalmente no tiene cuerpo de solicitud.
+    -Idempotente: Repetir una solicitud DELETE tendrá el mismo efecto que realizarla una sola vez.
+
 9. En lo que respecta al verbo PUT responde:
+
     - ¿Qué es un verbo PUT y cuál es su propósito?
+
+    El verbo PUT es un método HTTP utilizado para enviar datos al servidor con el propósito de actualizar un recurso existente o crear uno nuevo si no existe. Su principal objetivo es realizar actualizaciones completas de recursos, reemplazando la representación actual del recurso con la proporcionada en la solicitud.
+
     - ¿Cuándo se utiliza un verbo PUT?
+    
+    El verbo PUT se utiliza en las siguientes situaciones:
+    
+    *Actualizar un recurso existente: Cuando se necesita modificar completamente un recurso ya existente en el servidor.
+    *Crear un recurso: Cuando el recurso especificado no existe, PUT puede ser utilizado para crear un nuevo recurso en la ubicación especificada por la URL.
+    *Operaciones idempotentes: PUT es idempotente, lo que significa que realizar la misma solicitud PUT varias veces tendrá el mismo efecto que realizarla una sola vez.
+
     - ¿En qué se diferencia un verbo PUT de los otros verbos HTTP como POST, GET y DELETE?
+
+    *GET:
+    -Propósito: Recuperar datos de un servidor.
+    -Uso: Lectura de recursos.
+    -Sin efectos secundarios: No modifica el estado del servidor.
+    -Transmisión de datos: Los datos se pasan a través de la URL (query string).
+    -Idempotente: Repetir una solicitud GET no cambia el estado del recurso.
+
+    *POST:
+    -Propósito: Enviar datos al servidor para crear un nuevo recurso.
+    -Uso: Creación de recursos.
+    -Efectos secundarios: Modifica el estado del servidor.
+    -Transmisión de datos: Los datos se pasan en el cuerpo de la solicitud.
+    -No idempotente: Repetir una solicitud POST puede crear múltiples recursos idénticos.
+
+    *PUT:
+    -Propósito: Enviar datos al servidor para actualizar un recurso existente.
+    -Uso: Actualización de recursos.
+    -Efectos secundarios: Modifica el estado del servidor.
+    -Transmisión de datos: Los datos se pasan en el cuerpo de la solicitud.
+    -Idempotente: Repetir una solicitud PUT con los mismos datos tendrá el mismo efecto que realizarla una sola vez.
+
+    *DELETE
+    -Propósito: Eliminar un recurso existente en el servidor.
+    -Uso: Eliminación de recursos.
+    -Efectos secundarios: Modifica el estado del servidor.
+    -Transmisión de datos: Normalmente no tiene cuerpo de solicitud.
+    -Idempotente: Repetir una solicitud DELETE tendrá el mismo efecto que realizarla una sola vez.
+
 10. En lo que respecta al verbo DELETE responde:
+
     - ¿Qué es un verbo DELETE y cuál es su propósito?
+
+    El verbo DELETE es un método HTTP utilizado para solicitar la eliminación de un recurso existente en el servidor. Su propósito principal es eliminar recursos, como registros de bases de datos, archivos o cualquier otra entidad representada en el servidor.
+
     - ¿Cuándo se utiliza un verbo DELETE?
+
+    *Eliminación de recursos: Cuando se necesita eliminar un recurso específico del servidor, como un usuario, un producto, un archivo, etc.
+    *Operaciones idempotentes: Aunque el verbo DELETE es idempotente en teoría (es decir, realizar la misma solicitud DELETE varias veces debería tener el mismo efecto que realizarla una sola vez), en la práctica, puede haber variaciones en la implementación dependiendo del servidor y la aplicación.
+
     - ¿En qué se diferencia un verbo DELETE de los otros verbos HTTP como POST, GET y PUT?
+
+    *GET:
+    -Propósito: Recuperar datos de un servidor.
+    -Uso: Lectura de recursos.
+    -Sin efectos secundarios: No modifica el estado del servidor.
+    -Transmisión de datos: Los datos se pasan a través de la URL (query string).
+    -Idempotente: Repetir una solicitud GET no cambia el estado del recurso.
+
+    *POST:
+    -Propósito: Enviar datos al servidor para crear un nuevo recurso.
+    -Uso: Creación de recursos.
+    -Efectos secundarios: Modifica el estado del servidor.
+    -Transmisión de datos: Los datos se pasan en el cuerpo de la solicitud.
+    -No idempotente: Repetir una solicitud POST puede crear múltiples recursos idénticos.
+
+    *PUT:
+    -Propósito: Enviar datos al servidor para actualizar un recurso existente.
+    -Uso: Actualización de recursos.
+    -Efectos secundarios: Modifica el estado del servidor.
+    -Transmisión de datos: Los datos se pasan en el cuerpo de la solicitud.
+    -Idempotente: Repetir una solicitud PUT con los mismos datos tendrá el mismo efecto que realizarla una sola vez.
+
+    *DELETE
+    -Propósito: Eliminar un recurso existente en el servidor.
+    -Uso: Eliminación de recursos.
+    -Efectos secundarios: Modifica el estado del servidor.
+    -Transmisión de datos: Normalmente no tiene cuerpo de solicitud.
+    -Idempotente: Repetir una solicitud DELETE tendrá el mismo efecto que realizarla una sola vez.
+
 11. ¿Qué es un status code y cuáles son los más comunes?
+
+
+
 12. ¿Cuales son los status code mas comunes para el verbo POST?
 13. ¿Cuales son los status code mas comunes para el verbo GET?
 14. ¿Cuales son los status code mas comunes para el verbo PUT?
