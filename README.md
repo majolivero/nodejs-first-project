@@ -349,8 +349,49 @@ Algunas de las operaciones comunes que se pueden realizar con fs incluyen:
 *Cambio de permisos y propietarios de archivos 
 
 2. ¿Qué es un middleware en Express y cuál es su propósito?
+
+Son funciones intermedias que tienen acceso tanto a la solicitud (request) como a la respuesta (response)
+en una aplicación Express u otro framework similar. 
+
+Estas funciones pueden realizar tareas como:
+
+*Procesamiento de la solicitud: Modificar la solicitud entrante antes de que llegue a la ruta principal de la aplicación.
+*Autenticación y autorización:Verificar credenciales, permisos u otros aspectos de seguridad antes de permitir el acceso a ciertas rutas.
+*Manejo de errores: Capturar errores y manejarlos de manera centralizada para evitar que afecten la funcionalidad de la aplicación.
+*Logging y seguimiento: Registrar información sobre las solicitudes entrantes y salientes para propósitos de auditoría o depuración.
+*Compresión y transformación de datos: Comprimir respuestas o transformar datos antes de enviarlos al cliente.
+*Caché de respuestas : Almacenar en caché respuestas para mejorar la eficiencia y la velocidad de la aplicación.
+
 3. ¿Qué es un endpoint en una API RESTful y cuál es su función?
+
+En una API RESTful, un endpoint es una URL específica en el servidor que se utiliza para interactuar con
+los recursos de la API. 
+Los endpoints definen las rutas a las que pueden enviarse las solicitudes HTTP y generalmente representan una acción o un conjunto de acciones que se pueden realizar en un recurso. Cada endpoint corresponde a una combinación de una URL y un método HTTP (GET, POST, PUT, DELETE, etc.).
+
 4. ¿Qué son los verbos HTTP y cuáles son los más comunes?
+
+Los verbos HTTP, también conocidos como métodos HTTP, son comandos que indican el tipo de acción que se desea realizar en un recurso determinado en un servidor web. Los más comunes son:
+
+*GET:  Solicita la representación de un recurso específico. No debería tener efectos secundarios, es decir, no debería modificar ningún dato en el servidor. 
+Uso común: Obtener datos de un servidor (como una página web, una imagen, o información en formato JSON).
+Ejemplo: GET /users/123
+
+*POST: Envía datos al servidor para crear un nuevo recurso. Los datos se incluyen en el cuerpo de la solicitud.
+Uso común: Crear nuevos registros en una base de datos.
+Ejemplo: POST /users con un cuerpo de solicitud conteniendo los datos del nuevo usuario.
+
+*PUT: Envía datos al servidor para actualizar un recurso existente. Si el recurso no existe, PUT puede crear uno nuevo.
+Uso común: Actualizar información de un recurso existente.
+Ejemplo: PUT /users/123 con un cuerpo de solicitud conteniendo los datos actualizados del usuario.
+
+*DELETE: Elimina un recurso específico del servidor.
+Uso común: Eliminar un registro de una base de datos.
+Ejemplo: DELETE /users/123
+
+*PATCH: Aplica modificaciones parciales a un recurso existente. A diferencia de PUT, PATCH generalmente solo envía los campos que necesitan ser actualizados.
+Uso común: Actualizar parcialmente un recurso. 
+Ejemplo: PATCH /users/123 con un cuerpo de solicitud conteniendo solo los campos que necesitan ser modificados.
+
 5. ¿Qué es JSON y por qué es utilizado en las API RESTful?
 6. En lo que respecta al envio de datos a lo largo de los verbos http responde:
     - ¿Qué es el body de una petición?
