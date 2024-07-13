@@ -602,9 +602,126 @@ En resumen, JSON es el formato de datos preferido en las APIs RESTful debido a s
 
 11. ¿Qué es un status code y cuáles son los más comunes?
 
-
+Un status code (código de estado) es un número de tres dígitos devuelto por un servidor HTTP en respuesta a una solicitud realizada por un cliente. Este código de estado proporciona información sobre el estado de la solicitud y si se completó correctamente, se encontró un error, o si se necesita alguna acción adicional por parte del cliente.
 
 12. ¿Cuales son los status code mas comunes para el verbo POST?
+
+Los códigos de estado más comunes para el verbo POST en HTTP indican el resultado de la solicitud de creación o modificación de recursos en el servidor. Estos códigos son utilizados para informar al cliente sobre el estado de la operación que ha intentado realizar. Aquí algunos de los más comunes:
+
+*200 OK:
+
+Indica que la solicitud POST ha sido completada correctamente.
+Se utiliza cuando el recurso se ha creado o modificado según lo solicitado.
+
+*201 Created:
+
+Indica que la solicitud POST ha tenido éxito y que se ha creado un nuevo recurso.
+Es comúnmente devuelto cuando se utiliza POST para crear un nuevo recurso en el servidor.
+
+*400 Bad Request:
+
+Indica que la solicitud POST no pudo ser entendida por el servidor debido a una sintaxis incorrecta o datos no válidos.
+Puede ocurrir si los datos enviados en el cuerpo de la solicitud no cumplen con el formato esperado.
+
+*401 Unauthorized:
+
+Indica que se requiere autenticación para acceder al recurso solicitado.
+Es común cuando la autenticación es necesaria antes de permitir la creación o modificación de recursos.
+
+*403 Forbidden:
+
+Indica que el servidor ha entendido la solicitud POST, pero se niega a completarla.
+Puede ocurrir cuando el usuario no tiene los permisos necesarios para realizar la operación.
+
+*404 Not Found:
+
+Indica que el servidor no pudo encontrar el recurso solicitado.
+Aunque es más comúnmente asociado con el verbo GET, también puede ocurrir con POST si la ruta o el recurso no existe.
+
+*409 Conflict:
+
+Indica que la solicitud POST no pudo completarse debido a un conflicto con el estado actual del recurso.
+Puede ocurrir si se intenta crear un recurso que ya existe o si hay una violación de integridad de datos.
+
+Estos son algunos de los códigos de estado más comunes para el verbo POST en HTTP. La elección del código de estado depende de la situación específica y del servidor que procesa la solicitud, proporcionando información sobre si la operación fue exitosa, requerirá acciones adicionales del cliente, o si hubo algún error que impidió completar la solicitud.
+
 13. ¿Cuales son los status code mas comunes para el verbo GET?
+
+Los códigos de estado más comunes para el verbo GET en HTTP indican el resultado de la solicitud de recuperación de recursos desde el servidor. Estos códigos son utilizados para informar al cliente sobre el estado de la operación que ha intentado realizar. Aquí algunos de los más comunes:
+
+*200 OK:
+
+Indica que la solicitud GET ha sido completada correctamente.
+Se utiliza cuando se encuentra y se devuelve el recurso solicitado.
+
+*400 Bad Request:
+
+Indica que la solicitud GET no pudo ser entendida por el servidor debido a una sintaxis incorrecta o datos no válidos.
+Puede ocurrir si los parámetros de la URL o de la solicitud no están en el formato esperado.
+
+*401 Unauthorized:
+
+Indica que se requiere autenticación para acceder al recurso solicitado.
+Es común cuando se intenta acceder a recursos protegidos sin autenticación.
+
+*403 Forbidden:
+
+Indica que el servidor ha entendido la solicitud GET, pero se niega a completarla.
+Puede ocurrir cuando el usuario no tiene los permisos necesarios para acceder al recurso.
+
+*404 Not Found:
+
+Indica que el servidor no pudo encontrar el recurso solicitado.
+Es uno de los códigos de estado más conocidos y se utiliza cuando la URL solicitada no corresponde a ningún recurso existente.
+
+*500 Internal Server Error:
+
+Indica que hubo un error interno en el servidor al procesar la solicitud GET.
+Este código de estado generalmente se utiliza para errores que no están específicamente cubiertos por otros códigos de estado.
+
+Estos son algunos de los códigos de estado más comunes para el verbo GET en HTTP. La interpretación del código de estado permite al cliente saber si la solicitud fue exitosa, si necesita realizar acciones adicionales, o si hubo algún error que impidió completar la operación de manera correcta.
+
 14. ¿Cuales son los status code mas comunes para el verbo PUT?
+
+Los códigos de estado más comunes para el verbo PUT en HTTP indican el resultado de la solicitud de actualización de recursos en el servidor. Estos códigos son utilizados para informar al cliente sobre el estado de la operación que ha intentado realizar. Aquí algunos de los más comunes:
+
+*200 OK:
+
+Indica que la solicitud PUT ha sido completada correctamente.
+Se utiliza cuando el recurso ha sido actualizado según lo solicitado.
+
+*201 Created:
+
+Indica que la solicitud PUT ha tenido éxito y que se ha creado un nuevo recurso.
+Es comúnmente devuelto cuando se utiliza PUT para crear un nuevo recurso en la ubicación especificada por la URL.
+
+*400 Bad Request:
+
+Indica que la solicitud PUT no pudo ser entendida por el servidor debido a una sintaxis incorrecta o datos no válidos.
+Puede ocurrir si los datos enviados en el cuerpo de la solicitud PUT no cumplen con el formato esperado.
+
+*401 Unauthorized:
+
+Indica que se requiere autenticación para acceder al recurso solicitado.
+Es común cuando se intenta actualizar recursos protegidos sin autenticación.
+
+*403 Forbidden:
+
+Indica que el servidor ha entendido la solicitud PUT, pero se niega a completarla.
+Puede ocurrir cuando el usuario no tiene los permisos necesarios para actualizar el recurso.
+
+*404 Not Found:
+
+Indica que el servidor no pudo encontrar el recurso solicitado para actualizar.
+Puede ocurrir si la URL o el recurso especificado en la solicitud PUT no existe.
+
+*409 Conflict:
+
+Indica que la solicitud PUT no pudo completarse debido a un conflicto con el estado actual del recurso.
+Puede ocurrir si se intenta actualizar un recurso que ya ha sido modificado por otra solicitud simultánea.
+
+Estos son algunos de los códigos de estado más comunes para el verbo PUT en HTTP. 
+La elección del código de estado depende de la situación específica y del servidor que procesa la solicitud, proporcionando información sobre si la operación de actualización fue exitosa, requerirá acciones adicionales del cliente, o si hubo algún error que impidió completar la solicitud de manera adecuada.
+
+
 15. ¿Cuales son los status code mas comunes para el verbo DELETE?
