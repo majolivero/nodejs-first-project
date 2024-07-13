@@ -393,11 +393,35 @@ Uso común: Actualizar parcialmente un recurso.
 Ejemplo: PATCH /users/123 con un cuerpo de solicitud conteniendo solo los campos que necesitan ser modificados.
 
 5. ¿Qué es JSON y por qué es utilizado en las API RESTful?
+
+JSON (JavaScript Object Notation) es un formato de texto ligero para el intercambio de datos. Es fácil de leer y escribir tanto para los humanos como para las máquinas. JSON se utiliza ampliamente en las API RESTful debido a varias razones: 
+
+*SIMPLICIDAD : JSON es fácil de entender y usar, lo que lo hace accesible para desarrolladores de todos los niveles.
+*ESTRUCTURA BASADA EN TEXTO: Como es un formato de texto, JSON se puede enviar y recibir fácilmente a través de redes utilizando protocolos como HTTP.
+*COMPATIBILIDAD CON JAVASCRIPT:  JSON se deriva de la sintaxis de objetos de JavaScript, por lo que es nativamente compatible con el lenguaje y se puede trabajar con él fácilmente en navegadores web y entornos de servidor basados en JavaScript.
+*LIGERO: JSON es compacto y eficiente, lo que lo hace adecuado para la transferencia de datos a través de redes con limitaciones de ancho de banda.
+*FORMATO ESTÁNDAR: JSON es un estándar abierto y ampliamente soportado, lo que facilita la interoperabilidad entre diferentes sistemas y tecnologías.
+
+En resumen, JSON es el formato de datos preferido en las APIs RESTful debido a su simplicidad, facilidad de uso, compatibilidad con múltiples lenguajes de programación y su eficiencia para el intercambio de datos entre clientes y servidores.
+
 6. En lo que respecta al envio de datos a lo largo de los verbos http responde:
+
     - ¿Qué es el body de una petición?
+
+    El body (cuerpo) de una petición HTTP es la parte de la solicitud donde se incluyen los datos que se quieren enviar al servidor. El body es utilizado principalmente en las peticiones que implican el envío de datos, como POST, PUT y PATCH, aunque también puede estar presente en otras solicitudes dependiendo de la necesidad.
+
     - ¿Qué es el body de una respuesta?
+
+    El body de una respuesta HTTP es la parte de la respuesta que contiene los datos enviados desde el servidor al cliente. Este cuerpo puede incluir diversos tipos de contenido, como texto, JSON, HTML, XML, imágenes, entre otros, dependiendo de lo que el servidor necesite devolver al cliente.
+
     - ¿Qué es el query de una petición?
+
+    El query (o query string) de una petición HTTP es la parte de la URL que contiene los parámetros de consulta. Se usa para enviar datos al servidor en el contexto de una solicitud GET y se encuentra después del símbolo ? en la URL.
+
     - ¿Qué es el params de una petición?
+
+    Los params (o route parameters) de una petición HTTP son variables definidas en la ruta (URL) que se utilizan para identificar recursos específicos. Estos parámetros se definen usando dos puntos : en la definición de la ruta en el servidor y se extraen del URL en tiempo de ejecución.
+
 7. En lo que respecta al verbo POST responde:
     - ¿Qué es un verbo POST y cuál es su propósito?
     - ¿Cuándo se utiliza un verbo POST?
